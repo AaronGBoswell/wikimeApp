@@ -12,6 +12,10 @@
 		BD0AB6261BD972AC003FADE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6241BD972AC003FADE9 /* Main.storyboard */; };
 		BD0AB6281BD972AC003FADE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6271BD972AC003FADE9 /* Assets.xcassets */; };
 		BD0AB62B1BD972AC003FADE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6291BD972AC003FADE9 /* LaunchScreen.storyboard */; };
+		BD0AB6331BD97335003FADE9 /* WikiBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDB56C0D1BE6BFB80073705A /* WikimeConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */; settings = {ASSET_TAGS = (); }; };
+		BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0E1BE6D81A0073705A /* WikimeController.swift */; settings = {ASSET_TAGS = (); }; };
+		BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		BD0AB6271BD972AC003FADE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD0AB62A1BD972AC003FADE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD0AB62C1BD972AC003FADE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiBrowserViewController.swift; sourceTree = "<group>"; };
+		BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeConnector.swift; sourceTree = "<group>"; };
+		BDB56C0E1BE6D81A0073705A /* WikimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeController.swift; sourceTree = "<group>"; };
+		BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeResponder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,10 @@
 				BD0AB6201BD972AC003FADE9 /* AppDelegate.swift */,
 				BD0AB6221BD972AC003FADE9 /* ViewController.swift */,
 				BD0AB6241BD972AC003FADE9 /* Main.storyboard */,
+				BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */,
+				BDB56C0E1BE6D81A0073705A /* WikimeController.swift */,
+				BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */,
+				BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */,
 				BD0AB6271BD972AC003FADE9 /* Assets.xcassets */,
 				BD0AB6291BD972AC003FADE9 /* LaunchScreen.storyboard */,
 				BD0AB62C1BD972AC003FADE9 /* Info.plist */,
@@ -135,7 +147,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0AB6231BD972AC003FADE9 /* ViewController.swift in Sources */,
+				BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */,
+				BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */,
+				BDB56C0D1BE6BFB80073705A /* WikimeConnector.swift in Sources */,
 				BD0AB6211BD972AC003FADE9 /* AppDelegate.swift in Sources */,
+				BD0AB6331BD97335003FADE9 /* WikiBrowserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +301,7 @@
 				BD0AB6311BD972AC003FADE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C31f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ed7-8p-yKf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--History-->
@@ -77,28 +78,30 @@
                                 <animations/>
                                 <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ikl-kx-oxD">
-                                <rect key="frame" x="0.0" y="72" width="600" height="528"/>
-                                <subviews>
-                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-9S-wlI">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="528"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </webView>
-                                </subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-9S-wlI">
+                                <rect key="frame" x="20" y="64" width="560" height="536"/>
                                 <animations/>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="OVk-9S-wlI" firstAttribute="leading" secondItem="eBV-9q-AzC" secondAttribute="leadingMargin" id="2at-sC-evD"/>
                             <constraint firstItem="log-rd-uHA" firstAttribute="centerX" secondItem="eBV-9q-AzC" secondAttribute="centerX" id="G6E-fe-v7q"/>
-                            <constraint firstItem="Ikl-kx-oxD" firstAttribute="bottom" secondItem="IlV-zl-d9d" secondAttribute="top" id="RoK-da-ahg"/>
-                            <constraint firstItem="Ikl-kx-oxD" firstAttribute="top" secondItem="46S-Yu-rkc" secondAttribute="bottom" constant="8" symbolic="YES" id="S1v-Dx-rkw"/>
-                            <constraint firstAttribute="trailing" secondItem="Ikl-kx-oxD" secondAttribute="trailing" id="W6B-JV-fkw"/>
-                            <constraint firstItem="Ikl-kx-oxD" firstAttribute="leading" secondItem="eBV-9q-AzC" secondAttribute="leading" id="ixF-8V-28Y"/>
+                            <constraint firstItem="OVk-9S-wlI" firstAttribute="centerX" secondItem="eBV-9q-AzC" secondAttribute="centerX" id="SkD-x8-E1i"/>
+                            <constraint firstItem="IlV-zl-d9d" firstAttribute="top" secondItem="OVk-9S-wlI" secondAttribute="bottom" id="cyA-ZM-O8A"/>
+                            <constraint firstItem="OVk-9S-wlI" firstAttribute="top" secondItem="46S-Yu-rkc" secondAttribute="bottom" id="hdc-qZ-VAV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OVk-9S-wlI" secondAttribute="trailing" id="qU8-ng-IAX"/>
                             <constraint firstItem="log-rd-uHA" firstAttribute="centerY" secondItem="eBV-9q-AzC" secondAttribute="centerY" id="r6L-HI-a7Z"/>
+                            <constraint firstItem="OVk-9S-wlI" firstAttribute="centerY" secondItem="eBV-9q-AzC" secondAttribute="centerY" id="uKR-UY-Rbb"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SkD-x8-E1i"/>
+                                <exclude reference="uKR-UY-Rbb"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="log-rd-uHA" id="JZt-d4-Msp"/>

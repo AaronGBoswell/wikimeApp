@@ -12,6 +12,7 @@ class WikimeController{
     var maxID = 200
     private let defaults = NSUserDefaults.standardUserDefaults()
     private let wikimeConnector = WikimeConnector()
+    static let sharedWikimeController = WikimeController()
     
     init(){
         wikimeConnector.getMaxID({ [unowned self] (data, response, error) -> Void  in

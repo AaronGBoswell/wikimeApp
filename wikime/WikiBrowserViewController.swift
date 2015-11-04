@@ -10,7 +10,7 @@ import UIKit
 
 class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResponder {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    private var wikimeController = WikimeController()
+    private var wikimeController = WikimeController.sharedWikimeController
     var fromRandom = true
     var displayHref :String?{
         didSet{
@@ -25,6 +25,7 @@ class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResp
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
         let shareButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Action, target: self, action: "shareHref:")
         navigationItem.rightBarButtonItem = shareButton
         navigationItem.rightBarButtonItem?.enabled = false

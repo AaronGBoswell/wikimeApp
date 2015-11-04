@@ -10,7 +10,7 @@ import UIKit
 
 class WikiHistoryTableViewController: UITableViewController {
 
-    var wikiMeController = WikimeController()
+    var wikiMeController = WikimeController.sharedWikimeController
     override func viewWillAppear(animated: Bool) {
         self.tableView.reloadData()
 
@@ -47,7 +47,7 @@ class WikiHistoryTableViewController: UITableViewController {
         cell.textLabel?.text = wikiMeController.wikiHistory[indexPath.row]["articleTitle"] as? String
         cell.detailTextLabel?.text = wikiMeController.wikiHistory[indexPath.row]["href"] as? String
         if wikiMeController.wikiHistory[indexPath.row]["fromRandom"] as? Bool == true{
-            cell.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.01)
+            cell.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.025)
         }else{
             cell.backgroundColor = UIColor.whiteColor()
         }

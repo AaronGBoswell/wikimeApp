@@ -28,6 +28,16 @@ class WikimeController{
             defaults.setObject(newValue, forKey:"wikimeHistory")
         }
     }
+    func clearHistory(){
+        
+        history = [[String:AnyObject]]()
+    }
+    var wikiHistory: [[String:AnyObject]]{
+        get{
+            return history.reverse()
+        }
+    }
+    
     func isInHistory(href:String)->Bool{
         for element in history{
             if element["href"] as? String ?? "" == href{
@@ -36,9 +46,11 @@ class WikimeController{
         }
         return false
     }
-    func addToHistory(href:String){
+    func addToHistory(href:String, articleTitle:String, fromRandom:Bool){
         var historyEntry = [String:AnyObject]()
         historyEntry["href"] = href
+        historyEntry["articleTitle"] = articleTitle
+        historyEntry["fromRandom"] = fromRandom
         history.append(historyEntry)
         wikimeConnector.addhref(href) {[unowned self] (data, response, error) -> Void in
             self.wikimeConnector.addcount(href) { (data, response, error) -> Void in

@@ -12,11 +12,39 @@
 		BD0AB6261BD972AC003FADE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6241BD972AC003FADE9 /* Main.storyboard */; };
 		BD0AB6281BD972AC003FADE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6271BD972AC003FADE9 /* Assets.xcassets */; };
 		BD0AB62B1BD972AC003FADE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6291BD972AC003FADE9 /* LaunchScreen.storyboard */; };
-		BD0AB6331BD97335003FADE9 /* WikiBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		BDB56C0D1BE6BFB80073705A /* WikimeConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */; settings = {ASSET_TAGS = (); }; };
-		BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0E1BE6D81A0073705A /* WikimeController.swift */; settings = {ASSET_TAGS = (); }; };
-		BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */; settings = {ASSET_TAGS = (); }; };
+		BD0AB6331BD97335003FADE9 /* WikiBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */; };
+		BDB56C0D1BE6BFB80073705A /* WikimeConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */; };
+		BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0E1BE6D81A0073705A /* WikimeController.swift */; };
+		BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */; };
+		BDD7E8271BE93BAE00A1841A /* WikiHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDD7E8261BE93BAE00A1841A /* WikiHistoryTableViewController.swift */; };
+		BDF6506D1BEAAF240066F7C6 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF6506C1BEAAF240066F7C6 /* ShareViewController.swift */; };
+		BDF650701BEAAF240066F7C6 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDF6506E1BEAAF240066F7C6 /* MainInterface.storyboard */; };
+		BDF650741BEAAF240066F7C6 /* WikiShare.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDF6506A1BEAAF240066F7C6 /* WikiShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BDF650721BEAAF240066F7C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD0AB6151BD972AC003FADE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDF650691BEAAF240066F7C6;
+			remoteInfo = WikiShare;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BDF650781BEAAF240066F7C6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BDF650741BEAAF240066F7C6 /* WikiShare.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		BD0AB61D1BD972AC003FADE9 /* wikime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wikime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,10 +58,22 @@
 		BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeConnector.swift; sourceTree = "<group>"; };
 		BDB56C0E1BE6D81A0073705A /* WikimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeController.swift; sourceTree = "<group>"; };
 		BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeResponder.swift; sourceTree = "<group>"; };
+		BDD7E8261BE93BAE00A1841A /* WikiHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiHistoryTableViewController.swift; sourceTree = "<group>"; };
+		BDF6506A1BEAAF240066F7C6 /* WikiShare.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WikiShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDF6506C1BEAAF240066F7C6 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		BDF6506F1BEAAF240066F7C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		BDF650711BEAAF240066F7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BD0AB61A1BD972AC003FADE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF650671BEAAF240066F7C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -47,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0AB61F1BD972AC003FADE9 /* wikime */,
+				BDF6506B1BEAAF240066F7C6 /* WikiShare */,
 				BD0AB61E1BD972AC003FADE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0AB61D1BD972AC003FADE9 /* wikime.app */,
+				BDF6506A1BEAAF240066F7C6 /* WikiShare.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +107,7 @@
 				BD0AB6201BD972AC003FADE9 /* AppDelegate.swift */,
 				BD0AB6221BD972AC003FADE9 /* ViewController.swift */,
 				BD0AB6241BD972AC003FADE9 /* Main.storyboard */,
+				BDD7E8261BE93BAE00A1841A /* WikiHistoryTableViewController.swift */,
 				BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */,
 				BDB56C0E1BE6D81A0073705A /* WikimeController.swift */,
 				BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */,
@@ -74,6 +117,16 @@
 				BD0AB62C1BD972AC003FADE9 /* Info.plist */,
 			);
 			path = wikime;
+			sourceTree = "<group>";
+		};
+		BDF6506B1BEAAF240066F7C6 /* WikiShare */ = {
+			isa = PBXGroup;
+			children = (
+				BDF6506C1BEAAF240066F7C6 /* ShareViewController.swift */,
+				BDF6506E1BEAAF240066F7C6 /* MainInterface.storyboard */,
+				BDF650711BEAAF240066F7C6 /* Info.plist */,
+			);
+			path = WikiShare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,15 +139,34 @@
 				BD0AB6191BD972AC003FADE9 /* Sources */,
 				BD0AB61A1BD972AC003FADE9 /* Frameworks */,
 				BD0AB61B1BD972AC003FADE9 /* Resources */,
+				BDF650781BEAAF240066F7C6 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BDF650731BEAAF240066F7C6 /* PBXTargetDependency */,
 			);
 			name = wikime;
 			productName = wikime;
 			productReference = BD0AB61D1BD972AC003FADE9 /* wikime.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BDF650691BEAAF240066F7C6 /* WikiShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDF650771BEAAF240066F7C6 /* Build configuration list for PBXNativeTarget "WikiShare" */;
+			buildPhases = (
+				BDF650661BEAAF240066F7C6 /* Sources */,
+				BDF650671BEAAF240066F7C6 /* Frameworks */,
+				BDF650681BEAAF240066F7C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WikiShare;
+			productName = WikiShare;
+			productReference = BDF6506A1BEAAF240066F7C6 /* WikiShare.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,11 +174,17 @@
 		BD0AB6151BD972AC003FADE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Aaron Boswell";
 				TargetAttributes = {
 					BD0AB61C1BD972AC003FADE9 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 27RHNLCLG4;
+					};
+					BDF650691BEAAF240066F7C6 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 27RHNLCLG4;
 					};
 				};
 			};
@@ -124,6 +202,7 @@
 			projectRoot = "";
 			targets = (
 				BD0AB61C1BD972AC003FADE9 /* wikime */,
+				BDF650691BEAAF240066F7C6 /* WikiShare */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +218,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDF650681BEAAF240066F7C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF650701BEAAF240066F7C6 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -146,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDD7E8271BE93BAE00A1841A /* WikiHistoryTableViewController.swift in Sources */,
 				BD0AB6231BD972AC003FADE9 /* ViewController.swift in Sources */,
 				BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */,
 				BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */,
@@ -155,7 +243,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BDF650661BEAAF240066F7C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDF6506D1BEAAF240066F7C6 /* ShareViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BDF650731BEAAF240066F7C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDF650691BEAAF240066F7C6 /* WikiShare */;
+			targetProxy = BDF650721BEAAF240066F7C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BD0AB6241BD972AC003FADE9 /* Main.storyboard */ = {
@@ -172,6 +276,14 @@
 				BD0AB62A1BD972AC003FADE9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BDF6506E1BEAAF240066F7C6 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDF6506F1BEAAF240066F7C6 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -264,10 +376,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = wikime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.wikime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -275,10 +391,42 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = wikime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.wikime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		BDF650751BEAAF240066F7C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = WikiShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.wikime.WikiShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		BDF650761BEAAF240066F7C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = WikiShare/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = company.wikime.WikiShare;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -302,6 +450,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		BDF650771BEAAF240066F7C6 /* Build configuration list for PBXNativeTarget "WikiShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDF650751BEAAF240066F7C6 /* Debug */,
+				BDF650761BEAAF240066F7C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

@@ -76,7 +76,6 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="log-rd-uHA">
                                 <rect key="frame" x="290" y="290" width="20" height="20"/>
                                 <animations/>
-                                <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </activityIndicatorView>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVk-9S-wlI">
                                 <rect key="frame" x="20" y="64" width="560" height="536"/>

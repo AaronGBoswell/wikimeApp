@@ -8,7 +8,7 @@
 
 import Foundation
 class WikimeConnector {
-    var baseURL = "http://mywikiread.azurewebsites.net/"
+    var baseURL = "http://www.mywikime.com/wikime/"
     var addhrefURL = "addhref.php"
     var gethrefURL = "gethref.php"
     var addtimeURL = "addtime.php"
@@ -17,6 +17,7 @@ class WikimeConnector {
     
     func gethref(id:Int, completionHandler: (NSData?, NSURLResponse?, NSError?) -> Void){
         let url = NSURL(string: (baseURL + gethrefURL + "?ID=\(id)"))
+        print(url)
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!,completionHandler: completionHandler)
         task.resume()
     }

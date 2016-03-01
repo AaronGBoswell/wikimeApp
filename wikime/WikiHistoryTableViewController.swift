@@ -47,9 +47,11 @@ class WikiHistoryTableViewController: UITableViewController {
         cell.textLabel?.text = wikiMeController.wikiHistory[indexPath.row]["articleTitle"] as? String
         cell.detailTextLabel?.text = wikiMeController.wikiHistory[indexPath.row]["href"] as? String
         if wikiMeController.wikiHistory[indexPath.row]["fromRandom"] as? Bool == true{
-            cell.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.025)
+            cell.backgroundColor = UIColor.blueColor().colorWithAlphaComponent(0.05)
         }else{
+            //cell.backgroundColor = UIColor.redColor().colorWithAlphaComponent(0.02)
             cell.backgroundColor = UIColor.whiteColor()
+
         }
 
         return cell

@@ -71,16 +71,19 @@ class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResp
     }
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         let urlString = request.URL!.absoluteString
-        if(urlString != displayHref){
-            let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("WikiBrowserViewController") as! WikiBrowserViewController
+        if let href = displayHref{
+            if(!urlString.hasPrefix(href)){
+                let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("WikiBrowserViewController") as! WikiBrowserViewController
                 
                 newViewController.displayHref = request.URL!.absoluteString
                 
                 navigationController?.pushViewController(newViewController, animated: true)
                 return false
             }
-
+            
+        }
         return true
+
     }
     func webViewDidFinishLoad(webView: UIWebView) {
         activityIndicator.stopAnimating()

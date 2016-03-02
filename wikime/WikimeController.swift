@@ -7,19 +7,30 @@
 //
 
 import Foundation
+import UIKit
 
 class WikimeController{
-    var maxID = 200
+    var urlArray:[[String:String]] = []
     private let defaults = NSUserDefaults.standardUserDefaults()
     private let wikimeConnector = WikimeConnector()
     static let sharedWikimeController = WikimeController()
     
+    
     init(){
-        wikimeConnector.getMaxID({ [unowned self] (data, response, error) -> Void  in
-            let response = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-            self.maxID = Int(response as String)!
-            print(self.maxID)
-        })
+        wikimeConnector.getURLObject(){ [unowned self] (data, response, error) -> Void  in
+            if error != nil {
+                print("error=\(error)")
+                return
+            }
+            do{
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments)
+                self.urlArray = json as! [[String : String]]
+                print(self.wikiHistory)
+                
+            }catch{
+                print("error")
+            }
+        };
     }
     private var history : [[String:AnyObject]]{
         get{
@@ -47,35 +58,35 @@ class WikimeController{
         }
         return false
     }
+    func move(fromhref: String, tohref: String){
+        wikimeConnector.addpath(fromhref,tohref: tohref)
+    }
     func addToHistory(href:String, articleTitle:String, fromRandom:Bool){
         var historyEntry = [String:AnyObject]()
         historyEntry["href"] = href
         historyEntry["articleTitle"] = articleTitle
         historyEntry["fromRandom"] = fromRandom
         history.append(historyEntry)
-        wikimeConnector.addhref(href) {[unowned self] (data, response, error) -> Void in
-            self.wikimeConnector.addcount(href) { (data, response, error) -> Void in
-                print("added\(href)")
-            }
-        }
+        wikimeConnector.addvisit(href)
     }
-    func selectUnseenHref(var id:Int = -1, responder:WikimeResponder){
-        if( id < 0){
-            id = Int(arc4random_uniform(UInt32(maxID)))
+    
+    func selectUnseenHref(var index:Int = -1) -> String{
+        if( index < 0){
+            index = Int(arc4random_uniform(UInt32(urlArray.count-1)))
         }else{
-            id++
-            if id > maxID {
-                id = 0
+            index++
+            if index > urlArray.count-1 {
+                index = 0
             }
         }
-        wikimeConnector.gethref(id) {[unowned self] (data, response, error) -> Void in
-            let response = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-            if self.isInHistory(response as String){
-                self.selectUnseenHref(id, responder: responder)
-            }else{
-                responder.receiveHref(response as String)
-            }
+        guard var link = urlArray[index]["url"] else {
+            return "fucked"
         }
+        if self.isInHistory(link){
+            link = selectUnseenHref(index)
+        }
+        return link
         
     }
+    
 }

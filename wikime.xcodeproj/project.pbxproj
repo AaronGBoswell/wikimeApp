@@ -13,6 +13,12 @@
 		BD0AB6281BD972AC003FADE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6271BD972AC003FADE9 /* Assets.xcassets */; };
 		BD0AB62B1BD972AC003FADE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB6291BD972AC003FADE9 /* LaunchScreen.storyboard */; };
 		BD0AB6331BD97335003FADE9 /* WikiBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */; };
+		BD1372C01C86687500A4BD29 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1372B91C86687500A4BD29 /* CSS.swift */; };
+		BD1372C21C86687500A4BD29 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1372BD1C86687500A4BD29 /* libxmlHTMLDocument.swift */; };
+		BD1372C31C86687500A4BD29 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1372BE1C86687500A4BD29 /* libxmlHTMLNode.swift */; };
+		BD1372C41C86687500A4BD29 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1372BF1C86687500A4BD29 /* libxmlParserOption.swift */; };
+		BD1372C81C866E0200A4BD29 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1372BB1C86687500A4BD29 /* Kanna.swift */; };
+		BD1372CA1C86798D00A4BD29 /* WikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1372C91C86798D00A4BD29 /* WikiParser.swift */; };
 		BDB56C0D1BE6BFB80073705A /* WikimeConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */; };
 		BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C0E1BE6D81A0073705A /* WikimeController.swift */; };
 		BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */; };
@@ -55,6 +61,15 @@
 		BD0AB62A1BD972AC003FADE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD0AB62C1BD972AC003FADE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiBrowserViewController.swift; sourceTree = "<group>"; };
+		BD1372B91C86687500A4BD29 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSS.swift; sourceTree = "<group>"; };
+		BD1372BA1C86687500A4BD29 /* Kanna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Kanna.h; sourceTree = "<group>"; };
+		BD1372BB1C86687500A4BD29 /* Kanna.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kanna.swift; sourceTree = "<group>"; };
+		BD1372BD1C86687500A4BD29 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		BD1372BE1C86687500A4BD29 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		BD1372BF1C86687500A4BD29 /* libxmlParserOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlParserOption.swift; sourceTree = "<group>"; };
+		BD1372C61C86691300A4BD29 /* libxml2-kanna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libxml2-kanna.h"; sourceTree = "<group>"; };
+		BD1372C71C86691300A4BD29 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		BD1372C91C86798D00A4BD29 /* WikiParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikiParser.swift; sourceTree = "<group>"; };
 		BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeConnector.swift; sourceTree = "<group>"; };
 		BDB56C0E1BE6D81A0073705A /* WikimeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeController.swift; sourceTree = "<group>"; };
 		BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WikimeResponder.swift; sourceTree = "<group>"; };
@@ -108,7 +123,9 @@
 				BD0AB6221BD972AC003FADE9 /* ViewController.swift */,
 				BD0AB6241BD972AC003FADE9 /* Main.storyboard */,
 				BDD7E8261BE93BAE00A1841A /* WikiHistoryTableViewController.swift */,
+				BD1372B81C86685D00A4BD29 /* Kanna */,
 				BD0AB6321BD97335003FADE9 /* WikiBrowserViewController.swift */,
+				BD1372C91C86798D00A4BD29 /* WikiParser.swift */,
 				BDB56C0E1BE6D81A0073705A /* WikimeController.swift */,
 				BDB56C101BE6DB7B0073705A /* WikimeResponder.swift */,
 				BDB56C0C1BE6BFB80073705A /* WikimeConnector.swift */,
@@ -117,6 +134,37 @@
 				BD0AB62C1BD972AC003FADE9 /* Info.plist */,
 			);
 			path = wikime;
+			sourceTree = "<group>";
+		};
+		BD1372B81C86685D00A4BD29 /* Kanna */ = {
+			isa = PBXGroup;
+			children = (
+				BD1372C51C86691300A4BD29 /* Modules */,
+				BD1372B91C86687500A4BD29 /* CSS.swift */,
+				BD1372BA1C86687500A4BD29 /* Kanna.h */,
+				BD1372BB1C86687500A4BD29 /* Kanna.swift */,
+				BD1372BC1C86687500A4BD29 /* libxml */,
+			);
+			name = Kanna;
+			sourceTree = "<group>";
+		};
+		BD1372BC1C86687500A4BD29 /* libxml */ = {
+			isa = PBXGroup;
+			children = (
+				BD1372BD1C86687500A4BD29 /* libxmlHTMLDocument.swift */,
+				BD1372BE1C86687500A4BD29 /* libxmlHTMLNode.swift */,
+				BD1372BF1C86687500A4BD29 /* libxmlParserOption.swift */,
+			);
+			path = libxml;
+			sourceTree = "<group>";
+		};
+		BD1372C51C86691300A4BD29 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				BD1372C61C86691300A4BD29 /* libxml2-kanna.h */,
+				BD1372C71C86691300A4BD29 /* module.modulemap */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		BDF6506B1BEAAF240066F7C6 /* WikiShare */ = {
@@ -234,12 +282,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDD7E8271BE93BAE00A1841A /* WikiHistoryTableViewController.swift in Sources */,
+				BD1372C41C86687500A4BD29 /* libxmlParserOption.swift in Sources */,
 				BD0AB6231BD972AC003FADE9 /* ViewController.swift in Sources */,
 				BDB56C0F1BE6D81A0073705A /* WikimeController.swift in Sources */,
+				BD1372C21C86687500A4BD29 /* libxmlHTMLDocument.swift in Sources */,
+				BD1372CA1C86798D00A4BD29 /* WikiParser.swift in Sources */,
 				BDB56C111BE6DB7B0073705A /* WikimeResponder.swift in Sources */,
 				BDB56C0D1BE6BFB80073705A /* WikimeConnector.swift in Sources */,
+				BD1372C01C86687500A4BD29 /* CSS.swift in Sources */,
 				BD0AB6211BD972AC003FADE9 /* AppDelegate.swift in Sources */,
 				BD0AB6331BD97335003FADE9 /* WikiBrowserViewController.swift in Sources */,
+				BD1372C31C86687500A4BD29 /* libxmlHTMLNode.swift in Sources */,
+				BD1372C81C866E0200A4BD29 /* Kanna.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,10 +379,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				"SWIFT_INCLUDE_PATHS[arch=*]" = "$(SRCROOT)/wikime/Modules";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -379,6 +436,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = wikime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.wikime;
@@ -394,6 +452,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = wikime/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = company.wikime;
@@ -458,6 +517,7 @@
 				BDF650761BEAAF240066F7C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

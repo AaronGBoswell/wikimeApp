@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
-class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResponder {
+class WikiBrowserViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private var wikimeController = WikimeController.sharedWikimeController
+    
     var fromRandom = true
     var displayHref :String?{
         didSet{
@@ -31,12 +31,13 @@ class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResp
         navigationItem.rightBarButtonItem?.enabled = false
         webView.delegate = self
         if displayHref == nil{
-            wikimeController.selectUnseenHref(responder: self)
+            displayHref = wikimeController.selectUnseenHref()
         }else{
             displayHref = displayHref!
             fromRandom = false
         }
         self.view.bringSubviewToFront(activityIndicator)
+
 
         activityIndicator.stopAnimating()
         activityIndicator.startAnimating()
@@ -76,7 +77,7 @@ class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResp
                 let newViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("WikiBrowserViewController") as! WikiBrowserViewController
                 
                 newViewController.displayHref = request.URL!.absoluteString
-                
+                wikimeController.move(displayHref!, tohref: newViewController.displayHref!)
                 navigationController?.pushViewController(newViewController, animated: true)
                 return false
             }
@@ -95,6 +96,9 @@ class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResp
         screenKey = displayHref
         navigationItem.rightBarButtonItem?.enabled = true
         startMeasuring()
+        let url =  NSURL(string: (webView.request?.URL?.absoluteString.stringByReplacingOccurrencesOfString(".m",withString:""))!)
+        var parsed = ParseURL(url!)
+        print(parsed)
     }
     
     var startDate:NSDate?
@@ -132,12 +136,7 @@ class WikiBrowserViewController: UIViewController, UIWebViewDelegate, WikimeResp
                     let defaults = NSUserDefaults.standardUserDefaults()
                     let time = defaults.objectForKey(key) as? Int ?? 0
                     print("time spent on page :\(time)")
-                    wc.addtime(href, time: time, completionHandler: { (data, response, error) -> Void in
-                        defaults.setObject(0, forKey: key)
-                        let d = NSString(data: data!, encoding: NSUTF8StringEncoding)!
-
-                        print(d)
-                    })
+                    wc.addtime(href, time: time)
                 }
             }
         }
